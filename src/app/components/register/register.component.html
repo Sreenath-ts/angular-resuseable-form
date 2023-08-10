@@ -1,0 +1,113 @@
+<form  class="container" (submit)="submit()" [formGroup]="form">
+      <div class="row" style="border-bottom: 1px dotted black;">
+        <h1>Register</h1>
+      </div>
+   <div class="row">
+    <div class="left">
+        <div class="input">
+            <label>First Name</label>
+            <input type="text" formControlName="fname">
+            <app-error class="err" [control]="form.get('fname')!"></app-error>
+        </div>
+    </div>
+    <div class="rigth">
+        <div class="input">
+            <label>Last Name</label>
+            <input type="text" formControlName="lname">
+            <app-error class="err" [control]="form.get('lname')!"></app-error>
+        </div>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="left">
+        <div class="input">
+            <label>Age</label>
+            <input type="number" formControlName="age">
+            <app-error class="err" [control]="form.get('age')!"></app-error>
+        </div>
+    </div>
+    <div class="rigth">
+        <div class="input">
+            <label>Work Email</label>
+            <input type="email" formControlName="email">
+            <app-error class="err" [control]="form.get('email')!"></app-error>
+        </div>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="left">
+        <div class="input">
+            <label>Phone Number</label>
+            <input type="tel" formControlName="phone">
+            <app-error class="err" [control]="form.get('phone')!"></app-error>
+        </div>
+    </div>
+    <div class="rigth">
+        <div class="input">
+            <label>City <span>(Optional)</span></label>
+            <select formControlName="city">
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+        </div>
+    </div>
+   </div>
+ 
+
+   <div id="genderDiv" >
+    <div class="gender">
+        <label>Gender</label>
+    </div>
+    <div class="full">
+        <div class="radio">
+            <input type="radio" value="male" formControlName="gender">
+            <label>Male</label>
+        </div>
+        <div class="radio">
+            <input type="radio" value="Female" formControlName="gender">
+            <label>Female</label>
+        </div>
+        <div class="radio">
+            <input type="radio" value="Others" formControlName="gender">
+            <label>Others</label>
+        </div>
+        <app-error class="err" [control]="form.get('gender')!"></app-error>
+    </div>
+   </div>
+
+   <div class="row" style="border-bottom: 1px dotted black; border-top:1px dotted black ; padding-top: 5px;padding-bottom: 8px;">
+    <div class="left">
+        <div class="input">
+            <label>Password</label>
+            <input type="password" formControlName="password">
+            <app-error class="err" [control]="form.get('password')!"></app-error>
+        </div>
+    </div>
+    <div class="rigth">
+        <div class="input">
+            <label>Confrim Password</label>
+            <input type="password" formControlName="rePassword">
+            <app-error class="err" [control]="form.get('rePassword')!"></app-error>
+        </div>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="left">
+        <div class="check">
+           
+            <input type="checkbox" >
+            <label>I agree with the terms and conditions</label>
+        </div>
+    </div>
+    <div class="rigth">
+        <div class="btn">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+   </div>
+
+</form>

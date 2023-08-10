@@ -1,0 +1,73 @@
+ :host {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(227, 238, 234);
+    display: flex;
+    justify-content: center;
+ } 
+
+ .container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: min-content;
+    margin: 5px;
+   
+    padding: 5px;
+ }
+
+ .row {
+    display: flex;
+    width: 600px;
+    margin:30px 30px 30px 30px ;
+ }
+.left,.rigth {
+    display: flex;
+    flex-direction: column;
+     width: 300px;
+     margin-right: 25px;
+}
+ .input {
+    display: flex;
+    flex-direction: column;
+ }
+
+input,select {
+    padding: 6px;
+    border-radius: 3px;
+    border: 1.5px solid rgb(25, 22, 22);
+}
+
+input:focus {
+    outline: 2px solid gray;
+}
+
+.full {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#genderDiv{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 3px;
+    color: white;
+}
+
+.err {
+    color: red;
+}
+
